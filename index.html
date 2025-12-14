@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dinos Go Potty! - Complete Edition</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy:wght@400&family=Quattrocento+Sans:wght@400;700&display=swap" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet"/>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .ppt-slide {
-                @apply relative w-[1024px] h-[576px] mx-auto p-[30px] box-border overflow-hidden mb-[40px];
-            }
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy:wght@400&family=Quattrocento+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .ppt-slide {
+            width: 1024px;
+            height: 576px;
+            margin: 0 auto 40px auto;
+            padding: 30px;
+            box-sizing: border-box;
+            overflow: hidden;
+            position: relative;
+        }
+        .dino-character {
+            transition: transform 0.3s ease;
+        }
+        .dino-character:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
 
 <body class="bg-[#FDF6E3] py-8">
-    <!-- Page 1: Title Page - FIXED TEXT OVERLAY -->
+    <!-- Page 1: Title Page -->
     <div class="ppt-slide !bg-gradient-to-br from-[#E07A5F] to-[#81B29A] flex flex-col justify-center items-center text-center text-white">
         <div class="relative z-10 flex flex-col items-center bg-white/90 p-12 rounded-2xl shadow-2xl">
             <h1 class="text-8xl" style="font-family: Luckiest Guy, cursive; color: #E07A5F; text-shadow: 3px 3px 0px rgba(0,0,0,0.2);">Dinos Go Potty!</h1>
@@ -28,9 +38,12 @@
                 <i class="fas fa-star text-4xl" style="color: #81B29A;"></i>
             </div>
         </div>
+        <div class="relative z-10 mt-8">
+            <img src="book_cover.png" class="h-40 w-auto opacity-80 rounded-lg">
+        </div>
     </div>
-    
-    <!-- Page 2: Table of Contents - UPDATED -->
+
+    <!-- Page 2: Table of Contents -->
     <div class="ppt-slide !bg-[#FDF6E3] flex flex-col justify-center">
         <h1 class="text-6xl text-center mb-12" style="font-family: Luckiest Guy, cursive; color: #3D405B;">Our Complete Adventure</h1>
         <div class="grid grid-cols-2 gap-x-16 gap-y-6">
@@ -106,17 +119,34 @@
             <p class="text-xl leading-relaxed" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">They loved to play! But they were learning something new - how to use the potty. Just like you!</p>
         </div>
         <div class="w-1/2 grid grid-cols-2 grid-rows-3 gap-4">
-            <div class="flex flex-col items-center justify-center bg-white/50 rounded-xl p-2"><div class="h-20 w-20 bg-[#E07A5F] rounded-full flex items-center justify-center text-white text-2xl font-bold">T</div><p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #E07A5F;">Tilly</p></div>
-            <div class="flex flex-col items-center justify-center bg-white/50 rounded-xl p-2"><div class="h-20 w-20 bg-[#81B29A] rounded-full flex items-center justify-center text-white text-2xl font-bold">R</div><p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #81B29A;">Rex</p></div>
-            <div class="flex flex-col items-center justify-center bg-white/50 rounded-xl p-2"><div class="h-20 w-20 bg-[#3D405B] rounded-full flex items-center justify-center text-white text-2xl font-bold">S</div><p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">Steggy</p></div>
-            <div class="flex flex-col items-center justify-center bg-white/50 rounded-xl p-2"><div class="h-20 w-20 bg-[#81B29A] rounded-full flex items-center justify-center text-white text-2xl font-bold">P</div><p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #81B29A;">Ptera</p></div>
-            <div class="flex flex-col items-center justify-center bg-white/50 rounded-xl p-2 col-span-2"><div class="h-20 w-20 bg-[#E07A5F] rounded-full flex items-center justify-center text-white text-2xl font-bold">B</div><p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #E07A5F;">Bronto</p></div>
+            <div class="flex flex-col items-center justify-center bg-white/50 rounded-xl p-2 dino-character">
+                <img src="tilly_triceratops.png" class="h-20 w-auto">
+                <p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #E07A5F;">Tilly</p>
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white/50 rounded-xl p-2 dino-character">
+                <img src="rex_trex.png" class="h-20 w-auto">
+                <p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #81B29A;">Rex</p>
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white/50 rounded-xl p-2 dino-character">
+                <img src="steggy_stegosaurus.png" class="h-20 w-auto">
+                <p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">Steggy</p>
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white/50 rounded-xl p-2 dino-character">
+                <img src="ptera_pterodactyl.png" class="h-20 w-auto">
+                <p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #81B29A;">Ptera</p>
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white/50 rounded-xl p-2 dino-character col-span-2">
+                <img src="bronto_brachiosaurus.png" class="h-24 w-auto">
+                <p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #E07A5F;">Bronto</p>
+            </div>
         </div>
     </div>
 
     <!-- Page 4: Tilly's Big Feelings -->
     <div class="ppt-slide !bg-[#FDF6E3] flex items-center">
-        <div class="w-1/2 flex items-center justify-center"><div class="h-80 w-80 bg-[#E07A5F] rounded-full flex items-center justify-center text-white text-6xl">😰</div></div>
+        <div class="w-1/2 flex items-center justify-center">
+            <img src="tilly_triceratops.png" class="h-96 w-auto dino-character">
+        </div>
         <div class="w-1/2 flex flex-col justify-center pl-8">
             <h1 class="text-5xl mb-6" style="font-family: Luckiest Guy, cursive; color: #E07A5F;">Tilly's Big Feelings</h1>
             <p class="text-xl leading-relaxed mb-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">Tilly was playing when her tummy felt funny. It felt tight and full, like it had bubbles inside.</p>
@@ -139,14 +169,18 @@
                 <p class="text-xl" style="font-family: Quattrocento Sans, sans-serif; color: #81B29A;"><i class="fas fa-music mr-2"></i>Daddy sang: <span class="font-bold">'Potty, potty, here we go, take your time and let it flow!'</span></p>
             </div>
         </div>
-        <div class="w-1/2 flex items-center justify-center"><div class="h-80 w-80 bg-[#81B29A] rounded-full flex items-center justify-center text-white text-6xl">🦖</div></div>
+        <div class="w-1/2 flex items-center justify-center">
+            <img src="rex_trex.png" class="h-96 w-auto dino-character">
+        </div>
     </div>
 
     <!-- Page 6: Steggy's Accidents Happen -->
     <div class="ppt-slide !bg-[#FDF6E3] flex flex-col justify-center">
         <h1 class="text-5xl text-center mb-6" style="font-family: Luckiest Guy, cursive; color: #E07A5F;">Steggy's Accidents Happen</h1>
         <div class="flex items-center">
-            <div class="w-1/2 flex items-center justify-center"><div class="h-80 w-80 bg-[#3D405B] rounded-full flex items-center justify-center text-white text-6xl">😅</div></div>
+            <div class="w-1/2 flex items-center justify-center">
+                <img src="steggy_stegosaurus.png" class="h-80 w-auto dino-character">
+            </div>
             <div class="w-1/2 flex flex-col justify-center pl-8">
                 <p class="text-xl leading-relaxed mb-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">Steggy was playing with his favorite toy blocks. He was building a tall tower.</p>
                 <p class="text-xl leading-relaxed mb-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">His tummy felt a little funny, but he was too busy to listen. He wanted to finish his tower.</p>
@@ -158,7 +192,7 @@
         </div>
     </div>
 
-    <!-- Page 7: The Potty Success Chart - NEW -->
+    <!-- Page 7: MY INTERACTIVE POTTY SUCCESS CHART - KEEP THIS ONE -->
     <div class="ppt-slide !bg-[#FDF6E3] flex flex-col justify-center">
         <h1 class="text-5xl text-center mb-8" style="font-family: Luckiest Guy, cursive; color: #E07A5F;">The Potty Success Chart</h1>
         <div class="bg-white rounded-xl p-8 shadow-lg max-w-4xl mx-auto">
@@ -166,7 +200,7 @@
             <div class="space-y-4">
                 <div class="flex items-center justify-between p-3 bg-[#E07A5F22] rounded-lg">
                     <div class="flex items-center space-x-3">
-                        <div class="h-8 w-8 bg-[#E07A5F] rounded-full flex items-center justify-center text-white font-bold">T</div>
+                        <img src="tilly_triceratops.png" class="h-8 w-8 rounded-full">
                         <span class="text-xl font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #E07A5F;">Tilly the Triceratops</span>
                     </div>
                     <div class="flex space-x-1">
@@ -179,7 +213,7 @@
                 </div>
                 <div class="flex items-center justify-between p-3 bg-[#81B29A22] rounded-lg">
                     <div class="flex items-center space-x-3">
-                        <div class="h-8 w-8 bg-[#81B29A] rounded-full flex items-center justify-center text-white font-bold">R</div>
+                        <img src="rex_trex.png" class="h-8 w-8 rounded-full">
                         <span class="text-xl font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #81B29A;">Rex the T-Rex</span>
                     </div>
                     <div class="flex space-x-1">
@@ -192,7 +226,7 @@
                 </div>
                 <div class="flex items-center justify-between p-3 bg-[#3D405B22] rounded-lg">
                     <div class="flex items-center space-x-3">
-                        <div class="h-8 w-8 bg-[#3D405B] rounded-full flex items-center justify-center text-white font-bold">S</div>
+                        <img src="steggy_stegosaurus.png" class="h-8 w-8 rounded-full">
                         <span class="text-xl font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">Steggy the Stegosaurus</span>
                     </div>
                     <div class="flex space-x-1">
@@ -205,7 +239,7 @@
                 </div>
                 <div class="flex items-center justify-between p-3 bg-[#81B29A22] rounded-lg">
                     <div class="flex items-center space-x-3">
-                        <div class="h-8 w-8 bg-[#81B29A] rounded-full flex items-center justify-center text-white font-bold">P</div>
+                        <img src="ptera_pterodactyl.png" class="h-8 w-8 rounded-full">
                         <span class="text-xl font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #81B29A;">Ptera the Pterodactyl</span>
                     </div>
                     <div class="flex space-x-1">
@@ -218,7 +252,7 @@
                 </div>
                 <div class="flex items-center justify-between p-3 bg-[#E07A5F22] rounded-lg">
                     <div class="flex items-center space-x-3">
-                        <div class="h-8 w-8 bg-[#E07A5F] rounded-full flex items-center justify-center text-white font-bold">B</div>
+                        <img src="bronto_brachiosaurus.png" class="h-8 w-8 rounded-full">
                         <span class="text-xl font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #E07A5F;">Bronto the Brachiosaurus</span>
                     </div>
                     <div class="flex space-x-1">
@@ -234,68 +268,11 @@
         <p class="text-xl text-center mt-6" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">Every time someone uses the potty, they get a shiny gold star! ⭐</p>
     </div>
 
-    <!-- Page 8: The Potty Celebration -->
-    <div class="ppt-slide !bg-[#FDF6E3] flex flex-col justify-center">
-        <h1 class="text-5xl text-center mb-8" style="font-family: Luckiest Guy, cursive; color: #E07A5F;">The Potty Celebration</h1>
-        <div class="grid grid-cols-5 gap-4 mb-8">
-            <div class="flex flex-col items-center text-center"><div class="h-20 w-20 bg-[#E07A5F] rounded-full flex items-center justify-center text-white text-2xl font-bold">T</div><p class="text-base font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #E07A5F;">Tilly brought stickers</p></div>
-            <div class="flex flex-col items-center text-center"><div class="h-20 w-20 bg-[#81B29A] rounded-full flex items-center justify-center text-white text-2xl font-bold">R</div><p class="text-base font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #81B29A;">Rex brought the song</p></div>
-            <div class="flex flex-col items-center text-center"><div class="h-20 w-20 bg-[#3D405B] rounded-full flex items-center justify-center text-white text-2xl font-bold">S</div><p class="text-base font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">Steggy brought undies</p></div>
-            <div class="flex flex-col items-center text-center"><div class="h-20 w-20 bg-[#81B29A] rounded-full flex items-center justify-center text-white text-2xl font-bold">P</div><p class="text-base font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #81B29A;">Ptera brought success</p></div>
-            <div class="flex flex-col items-center text-center"><div class="h-20 w-20 bg-[#E07A5F] rounded-full flex items-center justify-center text-white text-2xl font-bold">B</div><p class="text-base font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #E07A5F;">Bronto brought soap</p></div>
-        </div>
-        <p class="text-xl leading-relaxed text-center" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">All five friends had a party! They were all learning together.</p>
-        <div class="mt-6 text-center"><div class="inline-block p-4 rounded-lg" style="background-color: rgba(129, 178, 154, 0.15);"><p class="text-xl" style="font-family: Quattrocento Sans, sans-serif; color: #81B29A;"><i class="fas fa-star mr-2"></i>They made a 'Potty Success Chart'! Every time someone used the potty, they got a shiny star sticker!</p></div></div>
-        <p class="text-xl leading-relaxed text-center mt-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">Tilly put the first star on the chart. Everyone clapped and cheered!</p>
-    </div>
-
-    <!-- Page 9: Tilly's Nighttime Challenge - NEW EXPANDED -->
+    <!-- Page 8: Ptera's Potty Success -->
     <div class="ppt-slide !bg-[#FDF6E3] flex items-center">
-        <div class="w-1/2 flex items-center justify-center"><div class="h-80 w-80 bg-[#E07A5F] rounded-full flex items-center justify-center text-white text-6xl">🌙</div></div>
-        <div class="w-1/2 flex flex-col justify-center pl-8">
-            <h1 class="text-5xl mb-6" style="font-family: Luckiest Guy, cursive; color: #E07A5F;">Tilly's Nighttime Challenge</h1>
-            <p class="text-xl leading-relaxed mb-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">Tilly was great at daytime potty, but nighttime was different. She felt sleepy and confused.</p>
-            <p class="text-xl leading-relaxed mb-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">"I don't want to wake up," she yawned. "I'm too tired to go potty!"</p>
-            <p class="text-xl leading-relaxed mb-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">Her mommy had an idea. "Let's try a bedtime routine! Potty, then story, then sleep."</p>
-            <div class="mt-4 p-4 rounded-lg" style="background-color: rgba(129, 178, 154, 0.15);">
-                <p class="text-xl" style="font-family: Quattrocento Sans, sans-serif; color: #81B29A;"><i class="fas fa-moon mr-2"></i>After two weeks of practice, Tilly woke up dry! "I did it! I stayed dry all night!"</p>
-            </div>
+        <div class="w-1/2 flex items-center justify-center">
+            <img src="ptera_pterodactyl.png" class="h-96 w-auto dino-character">
         </div>
-    </div>
-
-    <!-- Page 10: Rex's Public Potty Success - NEW EXPANDED -->
-    <div class="ppt-slide !bg-[#FDF6E3] flex items-center">
-        <div class="w-1/2 flex flex-col justify-center pr-8">
-            <h1 class="text-5xl mb-6" style="font-family: Luckiest Guy, cursive; color: #E07A5F;">Rex's Public Potty Success</h1>
-            <p class="text-xl leading-relaxed mb-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">At the dinosaur park, Rex needed to go. But the potty was different - it was big and loud!</p>
-            <p class="text-xl leading-relaxed mb-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">The toilet made a loud "WHOOOOSH!" when it flushed. Rex jumped back in surprise.</p>
-            <p class="text-xl leading-relaxed mb-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">"Different potties still do the same job," said Daddy. "We can do it together!"</p>
-            <div class="mt-4 p-4 rounded-lg" style="background-color: rgba(129, 178, 154, 0.15);">
-                <p class="text-xl" style="font-family: Quattrocento Sans, sans-serif; color: #81B29A;"><i class="fas fa-toilet mr-2"></i>Rex counted: "1-2-3-4-5" while the toilet flushed. He did it! Different isn't scary!</p>
-            </div>
-        </div>
-        <div class="w-1/2 flex items-center justify-center"><div class="h-80 w-80 bg-[#81B29A] rounded-full flex items-center justify-center text-white text-6xl">🏢</div></div>
-    </div>
-
-    <!-- Page 11: Steggy's Travel Potty - NEW EXPANDED -->
-    <div class="ppt-slide !bg-[#FDF6E3] flex flex-col justify-center">
-        <h1 class="text-5xl text-center mb-6" style="font-family: Luckiest Guy, cursive; color: #E07A5F;">Steggy's Travel Potty Adventure</h1>
-        <div class="flex items-center">
-            <div class="w-1/2 flex items-center justify-center"><div class="h-80 w-80 bg-[#3D405B] rounded-full flex items-center justify-center text-white text-6xl">🚗</div></div>
-            <div class="w-1/2 flex flex-col justify-center pl-8">
-                <p class="text-xl leading-relaxed mb-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">Steggy's family went to visit Grandma. The car ride was long - three whole hours!</p>
-                <p class="text-xl leading-relaxed mb-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">"I need to go potty!" Steggy said urgently. But they were still driving!</p>
-                <p class="text-xl leading-relaxed mb-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">Mommy had packed a travel potty seat. "We can stop at the next rest area," she said.</p>
-                <div class="mt-4 p-4 rounded-lg" style="background-color: rgba(129, 178, 154, 0.15);">
-                    <p class="text-xl" style="font-family: Quattrocento Sans, sans-serif; color: #81B29A;"><i class="fas fa-suitcase mr-2"></i>Steggy learned: Travel potties work great! Home potty anywhere you go!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Page 12: Ptera's Complete Success Story -->
-    <div class="ppt-slide !bg-[#FDF6E3] flex items-center">
-        <div class="w-1/2 flex items-center justify-center"><div class="h-80 w-80 bg-[#81B29A] rounded-full flex items-center justify-center text-white text-6xl">🎉</div></div>
         <div class="w-1/2 flex flex-col justify-center pl-8">
             <h1 class="text-5xl mb-6" style="font-family: Luckiest Guy, cursive; color: #E07A5F;">Ptera's Potty Success</h1>
             <p class="text-xl leading-relaxed mb-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">Ptera had been practicing every day. She listened to her body carefully.</p>
@@ -308,9 +285,9 @@
         </div>
     </div>
 
-    <!-- Page 13: Bronto's Handwashing Song - ENHANCED -->
+    <!-- Page 9: Bronto Washes His Hands -->
     <div class="ppt-slide !bg-[#FDF6E3] flex flex-col justify-center">
-        <h1 class="text-5xl text-center mb-6" style="font-family: Luckiest Guy, cursive; color: #E07A5F;">Bronto's Handwashing Song</h1>
+        <h1 class="text-5xl text-center mb-6" style="font-family: Luckiest Guy, cursive; color: #E07A5F;">Bronto Washes His Hands</h1>
         <div class="flex items-center">
             <div class="w-1/2 flex flex-col justify-center pr-8">
                 <p class="text-xl leading-relaxed mb-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">After using the potty, Bronto knew he needed to wash his hands.</p>
@@ -318,27 +295,18 @@
                 <div class="mt-4 p-4 rounded-lg" style="background-color: rgba(129, 178, 154, 0.15);">
                     <p class="text-xl" style="font-family: Quattrocento Sans, sans-serif; color: #81B29A;"><i class="fas fa-music mr-2"></i>He sang: <span class="font-bold">'Wash, wash, wash your hands, make them clean and bright! Front and back and in between, now they're clean and right!'</span></p>
                 </div>
-                <p class="text-xl leading-relaxed mt-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">He scrubbed for 20 seconds while singing. He rinsed all the bubbles away.</p>
+                <p class="text-xl leading-relaxed mt-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">He rinsed all the bubbles away. <span class="bg-[#81B29A33]" style="color: #81B29A;">'Clean hands!' said his sister.</span></p>
             </div>
-            <div class="w-1/2 flex items-center justify-center"><div class="h-80 w-80 bg-[#E07A5F] rounded-full flex items-center justify-center text-white text-6xl">🧼</div></div>
+            <div class="w-1/2 flex items-center justify-center">
+                <img src="bronto_brachiosaurus.png" class="h-96 w-auto dino-character">
+            </div>
         </div>
     </div>
 
-    <!-- Page 14: Helping Each Other - ENHANCED -->
-    <div class="ppt-slide !bg-[#FDF6E3] flex flex-col justify-center">
-        <h1 class="text-5xl text-center mb-8" style="font-family: Luckiest Guy, cursive; color: #E07A5F;">Helping Each Other</h1>
-        <div class="grid grid-cols-2 gap-8 mb-8">
-            <div class="space-y-4"><div class="flex items-center space-x-4"><div class="h-16 w-16 bg-[#E07A5F] rounded-full flex items-center justify-center text-white font-bold">T</div><i class="fas fa-heart text-3xl" style="color: #E07A5F;"></i><div class="h-16 w-16 bg-[#81B29A] rounded-full flex items-center justify-center text-white font-bold">R</div></div><p class="text-xl" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">When Tilly felt nervous about nighttime, Rex sang the potty song with her.</p></div>
-            <div class="space-y-4"><div class="flex items-center space-x-4"><div class="h-16 w-16 bg-[#3D405B] rounded-full flex items-center justify-center text-white font-bold">S</div><i class="fas fa-heart text-3xl" style="color: #81B29A;"></i><div class="h-16 w-16 bg-[#81B29A] rounded-full flex items-center justify-center text-white font-bold">P</div></div><p class="text-xl" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">When Steggy had travel worries, Ptera shared her travel potty tips.</p></div>
-        </div>
-        <div class="text-center"><div class="inline-block p-4 rounded-lg" style="background-color: rgba(129, 178, 154, 0.15);"><p class="text-xl" style="font-family: Quattrocento Sans, sans-serif; color: #81B29A;"><i class="fas fa-users mr-2"></i>They learned that friends help each other! When someone needs help, we can be kind.</p></div></div>
-        <p class="text-xl leading-relaxed text-center mt-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">Bronto helped everyone reach the sink. Steggy shared his extra undies. They were a team!</p>
-    </div>
-
-    <!-- Page 15: The Potty Training Parade - ENHANCED -->
+    <!-- Page 10: The Potty Training Parade -->
     <div class="ppt-slide !bg-[#FDF6E3] flex flex-col justify-center items-center text-center">
         <h1 class="text-5xl mb-6" style="font-family: Luckiest Guy, cursive; color: #E07A5F;">The Potty Training Parade</h1>
-        <div class="h-48 w-48 bg-gradient-to-r from-[#E07A5F] to-[#81B29A] rounded-full flex items-center justify-center text-white text-8xl mb-6">🎊</div>
+        <img src="dino_parade.png" class="h-48 w-auto mx-auto mb-6">
         <p class="text-xl leading-relaxed mb-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">One sunny morning, the friends had a parade! They wore their big kid undies.</p>
         <div class="grid grid-cols-2 gap-4 mb-6">
             <div class="text-left"><p class="text-xl font-bold" style="font-family: Quattrocento Sans, sans-serif; color: #E07A5F;">They shared tips:</p></div>
@@ -356,56 +324,47 @@
         <p class="text-xl leading-relaxed mt-4" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">Other little dinosaurs watched and clapped. Everyone was learning together!</p>
     </div>
 
-    <!-- Page 16: Parent Tips & Guide - NEW -->
-    <div class="ppt-slide !bg-[#FDF6E3] flex flex-col justify-center">
-        <h1 class="text-5xl text-center mb-8" style="font-family: Luckiest Guy, cursive; color: #E07A5F;">For Grown-Ups: Tips & Guide</h1>
-        <div class="grid grid-cols-2 gap-8">
-            <div>
-                <h3 class="text-2xl font-bold mb-4" style="font-family: Luckiest Guy, cursive; color: #81B29A;">Key Tips:</h3>
-                <ul class="space-y-2 text-lg" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">
-                    <li>• Every child learns at their own pace</li>
-                    <li>• Celebrate small successes</li>
-                    <li>• Never shame accidents</li>
-                    <li>• Keep extra clothes handy</li>
-                    <li>• Make potty time relaxed</li>
-                    <li>• Watch for body signals</li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-2xl font-bold mb-4" style="font-family: Luckiest Guy, cursive; color: #81B29A;">Ready Signs:</h3>
-                <ul class="space-y-2 text-lg" style="font-family: Quattrocento Sans, sans-serif; color: #3D405B;">
-                    <li>• Shows interest in potty</li>
-                    <li>• Stays dry 2+ hours</li>
-                    <li>• Follows simple instructions</li>
-                    <li>• Pulls pants up/down</li>
-                    <li>• Tells you when wet/soiled</li>
-                    <li>• Wants big kid undies</li>
-                </ul>
-            </div>
-        </div>
-        <div class="mt-8 p-6 rounded-lg" style="background-color: rgba(129, 178, 154, 0.15);">
-            <p class="text-xl text-center" style="font-family: Quattrocento Sans, sans-serif; color: #81B29A;"><i class="fas fa-heart mr-2"></i>Remember: Every dinosaur learns differently, and that's perfectly wonderful!</p>
-        </div>
-    </div>
-
-    <!-- Page 17: You're a Potty Star Too! - FINAL -->
+    <!-- Page 11: You're a Potty Star Too! -->
     <div class="ppt-slide !bg-gradient-to-br from-[#E07A5F] to-[#81B29A] flex flex-col justify-center items-center text-center text-white">
         <h1 class="text-6xl mb-6" style="font-family: Luckiest Guy, cursive;">You're a Potty Star Too!</h1>
         <div class="grid grid-cols-5 gap-4 mb-6">
-            <div class="flex flex-col items-center"><div class="h-16 w-16 bg-white/20 rounded-full flex items-center justify-center text-white text-2xl font-bold">T</div><p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif;">Tilly</p></div>
-            <div class="flex flex-col items-center"><div class="h-16 w-16 bg-white/20 rounded-full flex items-center justify-center text-white text-2xl font-bold">R</div><p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif;">Rex</p></div>
-            <div class="flex flex-col items-center"><div class="h-16 w-16 bg-white/20 rounded-full flex items-center justify-center text-white text-2xl font-bold">S</div><p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif;">Steggy</p></div>
-            <div class="flex flex-col items-center"><div class="h-16 w-16 bg-white/20 rounded-full flex items-center justify-center text-white text-2xl font-bold">P</div><p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif;">Ptera</p></div>
-            <div class="flex flex-col items-center"><div class="h-16 w-16 bg-white/20 rounded-full flex items-center justify-center text-white text-2xl font-bold">B</div><p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif;">Bronto</p></div>
+            <div class="flex flex-col items-center">
+                <img src="tilly_triceratops.png" class="h-16 w-auto">
+                <p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif;">Tilly</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="rex_trex.png" class="h-16 w-auto">
+                <p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif;">Rex</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="steggy_stegosaurus.png" class="h-16 w-auto">
+                <p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif;">Steggy</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="ptera_pterodactyl.png" class="h-16 w-auto">
+                <p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif;">Ptera</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="bronto_brachiosaurus.png" class="h-16 w-auto">
+                <p class="text-lg font-bold" style="font-family: Quattrocento Sans, sans-serif;">Bronto</p>
+            </div>
         </div>
-        <p class="text-2xl leading-relaxed mb-4" style="font-family: Quattrocento Sans, sans-serif;">The dinosaurs are cheering for YOU!</p>
-        <p class="text-xl leading-relaxed" style="font-family: Quattrocento Sans, sans-serif;">Remember: Every dinosaur learns differently, and that's perfectly wonderful!</p>
-        <div class="mt-8 flex space-x-4">
-            <i class="fas fa-star text-4xl" style="color: #FFD700;"></i>
-            <i class="fas fa-star text-4xl" style="color: #FFD700;"></i>
-            <i class="fas fa-star text-4xl" style="color: #FFD700;"></i>
+        <p class="text-2xl leading-relaxed mb-6" style="font-family: Quattrocento Sans, sans-serif;">Now it's your turn to be a potty star! Just like the dinosaur friends, you can learn too.</p>
+        <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="text-left">
+                <p class="text-xl" style="font-family: Quattrocento Sans, sans-serif;">• Listen to your body</p>
+                <p class="text-xl" style="font-family: Quattrocento Sans, sans-serif;">• Accidents are okay</p>
+            </div>
+            <div class="text-left">
+                <p class="text-xl" style="font-family: Quattrocento Sans, sans-serif;">• Keep practicing</p>
+                <p class="text-xl" style="font-family: Quattrocento Sans, sans-serif;">• Celebrate success!</p>
+            </div>
         </div>
+        <div class="mt-2 p-4 rounded-lg" style="background-color: rgba(255, 255, 255, 0.2);">
+            <p class="text-2xl font-bold" style="font-family: Quattrocento Sans, sans-serif;"><i class="fas fa-star mr-2"></i>Your family is so proud of you! Hooray for you!</p>
+        </div>
+        <p class="text-xl leading-relaxed mt-4" style="font-family: Quattrocento Sans, sans-serif;">Every time you try, you get better. You're growing up big and strong!</p>
         <p class="text-lg mt-4" style="font-family: Quattrocento Sans, sans-serif;">© 2024 Dinos Go Potty! - A Potty Training Adventure</p>
     </div>
 </body>
-  </html>
+</html>
